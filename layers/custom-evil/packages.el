@@ -8,4 +8,7 @@
 
 (defun custom-evil/init-evil-lion ()
   (use-package evil-lion
-    :config (evil-lion-mode)))
+    :config
+    (setq evil-lion-left-align-key "-L")
+    (setq evil-lion-right-align-key "-l")
+    (evil-lion-mode)))
