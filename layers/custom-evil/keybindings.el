@@ -1,8 +1,7 @@
-;;(general-define-key
-;;  :states 'normal
-;;  :mode 'git-commit-mode
-;;  "q" 'with-editor-finish
-;;  "z" 'with-editor-cancel)
+(with-eval-after-load 'evil-core
+  (evil-define-minor-mode-key 'normal 'git-commit-mode
+    "q" 'with-editor-finish
+    "Q" 'with-editor-cancel))
 
 ;;(evil-define-motion yf-visual-j (count)
 ;;  "Wrapper for `evil-next-visual-line' ignores the visual in visual-line mode"

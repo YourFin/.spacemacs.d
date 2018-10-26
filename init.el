@@ -321,7 +321,6 @@ you should place your code here."
   (add-to-list 'load-path (expand-file-name "lisp" dotspacemacs-directory))
   ;;; custom lib
   (require 'custom-commands)
-  ;;; apperance file
   (require 'heretic-evil-clipboard-mode)
   (require 'apperance)
   (require 'major-modes)
@@ -329,6 +328,7 @@ you should place your code here."
   ;;(require 'evil-bindings)
   (require 'evil-space-binds)
   (require 'global-bindings)
+  (global-heretic-evil-clipboard-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
