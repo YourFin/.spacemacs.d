@@ -1,0 +1,42 @@
+diff a/lisp/editing-file.el b/lisp/editing-file.el	(rejected hunks)
+@@ -1,6 +1,40 @@
+ 
+ ;;----This file dedicated to various editing tweaks that aren't evil related----;;
+ 
++
++(defvar yf/terminal-commad (cond ((eq system-type 'gnu/linux) "xterm")
++				 ((eq system-type 'darwin) "echo '
++echo '\"'\"'
++on run argv
++  if length of argv is equal to 0
++    set command to \"\"
++  else
++    set command to item 1 of argv
++  end if
++
++  tell application \"Terminal\"
++    activate
++    set newTab to do script(command)
++  end tell
++  return newTab
++end run
++'\"'\"' | osascript - \"$2\" > /dev/null' | sh")
++				 ;; Partially stolen from:
++				 ;; https://web.archive.org/web/20171029205649/https://stackoverflow.com/questions/4404242/programmatically-launch-terminal-app-with-a-specified-command-and-custom-colors
++				 ;; I feel disgusting
++				 ;; TODO: figure out how the **** this works on windoze
++				   (t "#"))
++  "The command called when pulling up an outside terminal. Should not include a -e flag. Used by `yf-run-outside-terminal'")
++
++(defvar yf/default-shell "zsh || bash || tcsht" )
++
++(defun yf-run-outside-terminal (&optional external-command)
++  "Open a terminal in the directory containing the current buffer.
++If EXTERNAL-COMMAND is set, pass that through to the shell with the -e flag. Ignored on windows.
++Terminal command is stored in `yf/terminal-command'"
++  (interactive)
++  (call-process-shell-command (concat yf/terminal-commad " " (if (bound-and-true-p external-command) (concat " -e " external-command) "") " &") nil nil nil))
++
+ (use-package smartparens
+   :config
+   ;;taken from http://web.archive.org/web/20170912005704/https://github.com/Fuco1/smartparens/issues/286
