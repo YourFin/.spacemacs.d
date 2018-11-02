@@ -1,2 +1,13 @@
 * .spacemacs.d
 My spacemacs configuration, migrated from my [[https://github.com/yourfin/.emacs.d][.emacs.d]].
+
+Has a couple additional layers:
+
+** [[https://github.com/mineo/yatemplate][yatemplate]]
+Integrates yatemplate and moves the templates folder to ~\~/.spacemacs.d/yatemplates~, as opposed to ~\~/.emacs.d/templates~
+
+** [[https://github.com/ptrv/helm-smex][helm-smex]]
+Integrates helm-smex and binds it to =SPC-SPC= and =M-x=. I am currently not using this
+
+** custom-evil
+Various evil customizations I have made.
