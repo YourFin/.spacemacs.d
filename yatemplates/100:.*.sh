@@ -1,0 +1,3 @@
+#!/usr/bin/env ${1:bash}
+
+$0
