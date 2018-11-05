@@ -11,3 +11,6 @@ Integrates helm-smex and binds it to =SPC-SPC= and =M-x=. I am currently not usi
 
 ** custom-evil
 Various evil customizations I have made.
+
+** [[https://github.com/DarthFennec/highlight-indent-guides][highlight-indent-guides]]
+Provides better highlighting for various levers of indentation, similarly to vscode et. all
