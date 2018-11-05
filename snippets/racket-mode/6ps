@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: 6 P's
+# key: PPPPPP
+# --
+;;; Procedure:
+;;;   $1
+;;; Parameters:
+;;;   $2
+;;; Purpose:
+;;;   $3
+;;; Produces:
+;;;   $4
+;;; Preconditions:
+;;;   $5
+;;; Postconditions:
+;;;   $6
+$0

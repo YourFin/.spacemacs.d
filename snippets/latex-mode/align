@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Align Section
+# key: align
+# --
+\begin{align*}
+   $1 &= $2
+\end{align*}
+$0

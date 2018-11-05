@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Big O (Cs)
+# key: bigo
+# --
+\ensuremath{\mathcal{O}(${1:n})}$0

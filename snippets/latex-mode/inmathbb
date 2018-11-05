@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: In Mathbb
+# key: inmathbb
+# --
+\ensuremath{\in\mathbb{${0}}}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: vector subscript
+# key: //vu
+# --
+\vec{${1:u}}_${2:1}$0
