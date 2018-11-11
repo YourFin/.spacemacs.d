@@ -17,34 +17,26 @@
 ;;    (evil-previous-line count)))
 
 ;; Force use of motion bindings
-(general-def 'normal
-             "J" nil)
-(general-def 'motion
-             ;;"j" 'yf-visual-j
-             ;;"k" 'yf-visual-k
-             ;;"J" (lambda () (interactive) (yf-visual-j 15))
-             ;;"K" (lambda () (interactive) (yf-visual-k 15))
-             "," 'goto-last-change
-             "g," 'goto-last-change-reverse
-             ";" 'evil-repeat-find-char
-             "g;" 'evil-repeat-find-char-reverse
-             ;;"/" 'swiper
-             )
-(general-define-key
- :states '(normal insert)
- "C-y" 'yas-expand
- "C-s" 'sp-slurp-hybrid-sexp
- "M-RET" 'comment-indent-new-line)
-(general-define-key
- :states 'insert
- "M-j" 'evil-next-visual-line
- "M-k" 'evil-previous-visual-line
- "M-h" 'evil-backward-char
- "M-l" 'evil-forward-char
- "M-w" 'evil-forward-word)
-
-;; a holdover from my vim days
-(define-key evil-normal-state-map (kbd "-j") 'evil-join)
+(with-eval-after-load 'general
+  (general-def 'normal
+    "J" nil)
+  (general-def 'motion
+    ;;"j" 'yf-visual-j
+    ;;"k" 'yf-visual-k
+    ;;"J" (lambda () (interactive) (yf-visual-j 15))
+    ;;"K" (lambda () (interactive) (yf-visual-k 15))
+    "," 'goto-last-change
+    "g," 'goto-last-change-reverse
+    ";" 'evil-repeat-find-char
+    "g;" 'evil-repeat-find-char-reverse
+    ;;"/" 'swiper
+    )
+  (general-define-key
+   :states '(normal insert)
+   "C-t" 'yas-expand
+   "C-s" 'sp-slurp-hybrid-sexp
+   "M-RET" 'comment-indent-new-line)
+  )
 
 ;;(define-key evil-normal-state-map (kbd "C-w") nil)
 ;;(define-key evil-motion-state-map (kbd "C-w") nil)
