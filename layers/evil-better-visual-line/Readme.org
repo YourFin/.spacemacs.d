@@ -1,0 +1,2 @@
+* evil-better-visual-line
+Small layer to wrap my [[https://github.com/YourFin/evil-better-visual-line][evil-better-visual-line]] package.
