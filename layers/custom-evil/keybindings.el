@@ -1,7 +1,9 @@
 (with-eval-after-load 'evil-core
   (evil-define-minor-mode-key 'normal 'git-commit-mode
     "q" 'with-editor-finish
-    "Q" 'with-editor-cancel))
+    "Q" 'with-editor-cancel)
+  ;; a holdover from my vim days
+  (define-key evil-normal-state-map (kbd "-j") 'evil-join))
 
 ;;(evil-define-motion yf-visual-j (count)
 ;;  "Wrapper for `evil-next-visual-line' ignores the visual in visual-line mode"
@@ -36,6 +38,9 @@
    "C-t" 'yas-expand
    "C-s" 'sp-slurp-hybrid-sexp
    "M-RET" 'comment-indent-new-line)
+  (general-define-key
+   :states '(insert)
+   "C-j" 'spacemacs/evil-goto-next-line-and-indent)
   )
 
 ;;(define-key evil-normal-state-map (kbd "C-w") nil)
