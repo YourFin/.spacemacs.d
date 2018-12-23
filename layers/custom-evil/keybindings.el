@@ -43,6 +43,20 @@
    "C-j" 'spacemacs/evil-goto-next-line-and-indent)
   )
 
+;; Haskell
+(with-eval-after-load 'haskell-cabal
+  (dolist (mode (cons 'haskell-cabal haskell-modes))
+          (spacemacs/set-leader-keys-for-major-mode mode
+            "ss" (lambda () (interactive)
+                   (haskell-process-load-file)
+                   (haskell-interactive-switch))
+            "sS" 'haskell-interactive-switch
+            "sc" 'haskell-process-load-file
+            "sb" 'spacemacs/haskell-interactive-bring)))
+(with-eval-after-load 'haskell-interactive
+  (spacemacs/set-leader-keys-for-major-mode 'haskell-interactive
+    "ss" 'haskell-interactive-switch-back))
+
 ;;(define-key evil-normal-state-map (kbd "C-w") nil)
 ;;(define-key evil-motion-state-map (kbd "C-w") nil)
 ;;(define-key evil-insert-state-map (kbd "C-w") nil)
