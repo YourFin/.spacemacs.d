@@ -51,6 +51,8 @@
 (spacemacs/set-leader-keys "ps" 'helm-projectile-switch-project)
 
 (spacemacs/set-leader-keys "ok" 'heretic-evil-helm-kill-ring)
+(spacemacs/set-leader-keys "aC" 'calc-do-dispatch)
+(spacemacs/set-leader-keys "ac" 'calc)
 
 (provide 'evil-space-binds)
 ;;; evil-space-binds.el ends here
