@@ -185,4 +185,9 @@ i.e. change right window to bottom, or change bottom window to right."
 	(find-file file))
     (message "Current buffer does not have an associated file.")))
 
+(defun yf-hard-line-wrap-mode ()
+  "Alias for `auto-fill-mode' as I can never remember its name"
+  (interactive)
+  (auto-fill-mode))
+
 (provide 'custom-commands)
