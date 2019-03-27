@@ -37,7 +37,7 @@ Assumes a *nix environment"
     ;; "escape" single quotes
     (let ((clip-echo (concat "echo '" (replace-regexp-in-string "'" "'\"'\"'" INPUT-STRING) "' | ")))
       (message clip-echo)
-      (cond 
+      (cond
        ;; We're just gonna assume that windows is going to be running the gui version of
        ;; emacs for now, as screw the windows command line.
        ((eq "windows-nt" system-type)
@@ -108,7 +108,7 @@ Defaults to helm-mini"
 ;; Note that this should not be moved to init.el,
 ;;as there is a good chance that the things required
 ;;in this file will be used elsewhere
-(defun try-require (name) 
+(defun try-require (name)
   "Attepts to require a file, but doesn't break
    everything if there's something wrong with the
    file"
