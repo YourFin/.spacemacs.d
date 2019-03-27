@@ -31,6 +31,8 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     octave
+     racket
      ansible
      nginx
      erlang
@@ -39,6 +41,7 @@ values."
      yatemplate
      highlight-indent-guides
      evil-better-visual-line
+     helm-smex
 
      ;;; Languages and "languages"
      nginx
