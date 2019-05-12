@@ -190,4 +190,9 @@ i.e. change right window to bottom, or change bottom window to right."
   (interactive)
   (auto-fill-mode))
 
+(defun yf-reload-buffer ()
+  "Alias for `revert-buffer' as a I can never remember its name"
+  (interactive)
+  (revert-buffer))
+
 (provide 'custom-commands)
