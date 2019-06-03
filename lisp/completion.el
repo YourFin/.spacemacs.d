@@ -4,7 +4,7 @@
 ;;; that do not need a full IDE. This file should
 ;;; not load if emacs is accessed through SSH
 
-(use-package company 
+(use-package company
   :config
   ;; Add yasnippet support for all company backends
   ;; https://github.com/syl20bnr/spacemacs/pull/179

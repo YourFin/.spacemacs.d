@@ -47,7 +47,7 @@
 (spacemacs/set-leader-keys "g" 'magit-status)
 
 ;; Projectile/projects
-(spacemacs/set-leader-keys "pa" 'helm-projectile-ag)
+(spacemacs/set-leader-keys "pa" 'helm-projectile-rg)
 (spacemacs/set-leader-keys "ps" 'helm-projectile-switch-project)
 
 (spacemacs/set-leader-keys "ok" 'heretic-evil-helm-kill-ring)

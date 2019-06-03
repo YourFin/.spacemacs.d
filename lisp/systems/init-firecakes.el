@@ -1,9 +1,9 @@
 ;;; init-firecakes.el --- init file for firecakes    -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017  
+;; Copyright (C) 2017 Patrick Nuckolls
 
 ;; Author:  <pen@firecakes>
-;; Keywords: hardware 
+;; Keywords: hardware
 
 (setq yf/terminal-command "kitty")
 
