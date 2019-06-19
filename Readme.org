@@ -14,3 +14,7 @@ Various evil customizations I have made.
 
 ** [[https://github.com/DarthFennec/highlight-indent-guides][highlight-indent-guides]]
 Provides better highlighting for various levers of indentation, similarly to vscode et. all
+
+** Todo:
+Steal this: https://plugins.jetbrains.com/plugin/2162-string-manipulation
+As a hydra probably
