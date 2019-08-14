@@ -91,6 +91,7 @@ values."
      (company-jedi :location elpa)
      helm-projectile
      helm-rg
+     emojify
      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
