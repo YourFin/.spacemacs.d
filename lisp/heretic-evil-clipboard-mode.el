@@ -10,7 +10,7 @@ truthy value: kill-new inserts into the second position in the kill ring
 (defvar heretic-evil-clipboard/mode-line-name " heretic-clip"
   "The mode-line name for `heretic-evil-clipboard-mode'.
 Should start with a space")
-(defvar heretic-evil-clipboard/ignored-modes (list 'magit)
+(defvar heretic-evil-clipboard/ignored-modes (list 'magit 'magit-diff-mode 'git-rebase-mode)
   "Modes that `heretic-evil-clipboard-mode' will not bind in.
 Must be changed before `heretic-evil-clipboard-mode.el' is loaded.")
 (defvar heretic-evil-clipboard//paste-kill nil
@@ -62,7 +62,7 @@ by `heretic-evil-clipboard-mode' as defined in `heretic-evil-clipboard/ignored-m
   (mapcar
    (lambda (mode)
      (let ((mode-hook
-            (intern (concat (symbol-name mode) "-mode-hook")))) 
+            (intern (concat (symbol-name mode) "-mode-hook"))))
        (if mode-hook
            (add-hook mode-hook 'heretic-evil-clipboard-mode-off)
          (error (concat "heretic-evil-clip: mode hook does not exist: "
@@ -71,7 +71,7 @@ by `heretic-evil-clipboard-mode' as defined in `heretic-evil-clipboard/ignored-m
 
 (defun heretic-evil-clipboard--bind (key def)
   "Binds KEY to DEF with evil-define key
-Alias for (`evil-define-key' (visual and normal) 
+Alias for (`evil-define-key' (visual and normal)
                              `heretic-evil-cilpboard-mode-map' KEY DEF)"
   (evil-define-minor-mode-key 'visual 'heretic-evil-clipboard-mode key def)
   (evil-define-minor-mode-key 'normal 'heretic-evil-clipboard-mode key def))
@@ -251,7 +251,7 @@ clipboard.
 This mode currently has built in support for `evil-cleverparens-mode',
 but theoretically any minor mode could be added in a similar manner
 
-To further motivate usage of your new and improved `kill-ring', 
+To further motivate usage of your new and improved `kill-ring',
 `heretic-evil-clipboard-mode' provides heretic-evil-helm-kill-ring"
   :lighter heretic-evil-clipboard/mode-line-name
   :keymap (make-sparse-keymap)
@@ -293,8 +293,7 @@ To further motivate usage of your new and improved `kill-ring',
            ;; Mask off the old kill ring, and don't
            ;; paste anywhere
            (kill-new
-            )
-           (heretic-evil-clipboard-p 1))))
+            (heretic-evil-clipboard-p 1)))))
       ("Paste before (override in visual)" .
        (lambda (_str)
          (let ((marked (helm-marked-candidates))
