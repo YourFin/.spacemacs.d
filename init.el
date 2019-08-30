@@ -65,6 +65,7 @@ values."
      docker
      go
      erlang
+     common-lisp
 
      ;;; Necessities
      helm
