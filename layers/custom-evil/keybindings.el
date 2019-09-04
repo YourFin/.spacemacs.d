@@ -57,6 +57,12 @@
   (spacemacs/set-leader-keys-for-major-mode 'haskell-interactive
     "ss" 'haskell-interactive-switch-back))
 
+;; Latex
+(with-eval-after-load 'tex-mode
+  (spacemacs/set-leader-keys-for-major-mode 'latex-mode
+    "ib" 'latex-insert-block
+    "pm" 'latex-preview-pane-mode))
+
 ;;(define-key evil-normal-state-map (kbd "C-w") nil)
 ;;(define-key evil-motion-state-map (kbd "C-w") nil)
 ;;(define-key evil-insert-state-map (kbd "C-w") nil)
