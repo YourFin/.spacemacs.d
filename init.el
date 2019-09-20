@@ -48,6 +48,7 @@ values."
      highlight-indent-guides
      evil-better-visual-line
      helm-smex
+     pretty-delimiters
 
      ;;; Languages and "languages"
      nginx
@@ -314,7 +315,7 @@ values."
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
-   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-highlight-delimiters nil
    ;; If non nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
    dotspacemacs-persistent-server nil
