@@ -39,10 +39,10 @@
     (make-unmatched-delimiter-face 'show-paren-mismatch
                                    'sp-show-pair-mismatch-face))
 
-  ;; Disable highlighting of faces surronding current cursor
+  ;; Disable highlighting of faces surrounding current cursor
   ;; Spacemacs relies on `highlight-parentheses-mode' to do this,
   ;; which is kinda screwy and doesn't use faces.
   ;;
   ;; Personally I think it'd be nice if this actually used faces so I could just
-  ;; set it to bold the, but nooooo
+  ;; set it to bold the surrounding, but nooooo
   (setq dotspacemacs-highlight-delimiters nil))
