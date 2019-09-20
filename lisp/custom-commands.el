@@ -161,7 +161,7 @@ i.e. change right window to bottom, or change bottom window to right."
                   (split-window-horizontally))
                 (set-window-buffer (windmove-find-other-window neighbour-dir) other-buf))))))))
 
-(defvar yf/clone-location "~/gitprojects"
+(defvar yf/clone-location "~/g"
   "The location that `yf-clone-clipoard' clones to.")
 
 (defun yf-clone-clipboard ()
