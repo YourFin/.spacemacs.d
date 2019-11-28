@@ -1,4 +1,8 @@
-;; (defconst helm-smex-packages
+(defconst yf-elm-packages
+     '(elm-mode))
+
+(defun yf-elm/post-init-elm-mode ()
+  (add-hook 'elm-mode-hook 'elm-format-on-save-mode))
 ;;   '(helm-smex))
 
 ;; (defun helm-smex/init-helm-smex ()

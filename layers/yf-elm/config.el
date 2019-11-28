@@ -1,2 +1,3 @@
-(with-eval-after-load 'elm
-  (add-hook 'elm-mode-hook #'elm-format-on-save-mode))
+;; (with-eval-after-load 'elm
+;;   (message "hello, elm!")
+;;   (add-hook 'elm-mode-hook #'elm-format-on-save-mode))

@@ -36,6 +36,7 @@ values."
    dotspacemacs-configuration-layers
    '(
      elm
+     yf-elm ; elm customization
      vimscript
      csv
      octave
