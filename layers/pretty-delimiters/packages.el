@@ -1,6 +1,6 @@
 (defconst pretty-delimiters-packages
-  '(rainbow-delimiters))
+ '(rainbow-delimiters))
 
-(defun pretty-delimiters/init-rainbow-delimiters ()
-  (use-package rainbow-delimiters
-    :defer t))
+(defun pretty-delimiters/post-init-rainbow-delimiters ()
+  (add-hook 'latex-mode-hook #'rainbow-delimiters-mode-enable)
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode-enable))

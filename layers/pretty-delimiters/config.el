@@ -23,8 +23,8 @@
 
   (make-unmatched-delimiter-face 'rainbow-delimiters-mismatched-face
                                  'rainbow-delimiters-unmatched-face)
-  (add-hook 'latex-mode-hook #'rainbow-delimiters-mode)
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+  (add-hook 'latex-mode-hook #'rainbow-delimiters-mode-enable)
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode-enable))
 
 (with-eval-after-load 'smartparens
   ;; Force reset smartparens faces to defer to rainbow-delimiters
