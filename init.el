@@ -379,6 +379,17 @@ you should place your code here."
     (add-to-list 'load-path machine-dir))
   (defvar yf/machine-file-symb (intern (concat "init-" system-name)))
   (try-require yf/machine-file-symb)
+
+  ;; TODO: Move this indentation block
+  (setq c-basic-offset 2)
+  (setq coffe-tab-width 2)
+  (setq javascript-indent-level 2)
+  (setq js-indent-level 2)
+  (setq js2-basic-offset 2)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq css-indent-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
